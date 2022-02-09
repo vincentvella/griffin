@@ -16,6 +16,12 @@
     },
     "test": {
       "cache": false
+    },
+    "griffin:start": {
+      "cache": false
+    },
+    "griffin-cli:start": {
+      "cache": false
     }
   }
 }
