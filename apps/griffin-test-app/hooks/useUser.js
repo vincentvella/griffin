@@ -1,4 +1,4 @@
-import mockUseUser from './useUser.griffin.mock'
+// import mockUseUser from './useUser.griffin.mock'
 
 export default function useUser() {
   return {
