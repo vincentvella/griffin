@@ -1,6 +1,7 @@
 import { Command, Flags } from '@oclif/core'
 import type { WebSocketServer } from 'ws'
 import Metro from 'metro'
+import path from 'path'
 import hmrJsBundle from 'metro/src/DeltaBundler/Serializers/hmrJsBundle'
 import { createDevServerMiddleware as createReactNativeDevServerMiddleware } from '@react-native-community/cli-server-api'
 
@@ -77,10 +78,10 @@ export default class Start extends Command {
     // Just to trigger it automatically
     setTimeout(async () => {
       const payload = await generateHMRPayload(
-        '/Users/yusufyildirim/development/griffin/apps/griffin-test-app/hooks/useUser.js',
+        path.resolve(__dirname, '../../../griffin-test-app/hooks/useUser.js')
       )
       console.log('HMR Payload', payload)
-    }, 5000)
+    }, 100000)
 
     // const payloadExample = {
     //   type: 'update',
